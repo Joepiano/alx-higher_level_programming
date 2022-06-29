@@ -184,3 +184,11 @@ class Rectangle:
 
         return self.__draw_rectangle()
 
+    def __repr__(self):
+        """
+        Returns the representation of the Rectangle.
+        """
+        w = str(eval('self.width'))
+        h = str(eval('self.height'))
+
+        return 'Rectangle(' + w + ', ' + h + ')'
