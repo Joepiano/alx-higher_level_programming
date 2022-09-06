@@ -3,8 +3,8 @@
 let cuantity = 0;
 
 const logMe = (item) => {
-	  console.log(`${cuantity}: ${item}`);
-	  cuantity++;
+  console.log(`${cuantity}: ${item}`);
+  cuantity++;
 };
 
 module.exports = { logMe };
