@@ -1,10 +1,11 @@
-onst x = parseInt(argv[2]);
-const y = parseInt(arg#!/usr/bin/node
-	const argv = process.argv;
-	cv[3]);
+#!/usr/bin/node
 
 function add (a, b) {
-	  return (a + b);
+  return (a + b);
 }
 
-console.log(add(x, y));
+const { argv } = require('process');
+const num1 = parseInt(argv[2]);
+const num2 = parseInt(argv[3]);
+
+console.log(add(num1, num2));
