@@ -1,18 +1,13 @@
 #!/usr/bin/node
-const nums = process.argv;
 
-function secondMax (array) {
-	  if (array.length <= 3) {
-		      return (0);
-		    }
+const { argv } = require('process');
+const args = argv.slice(2);
+let result = 0;
+let finalArray = [];
 
-	  array = array.slice(2).map(n => parseInt(n));
-
-	  const max = Math.max(...array);
-
-	  const arr = array.filter(arr => arr < max);
-
-	  return (Math.max(...arr));
+if (args.length > 1) {
+  finalArray = [...new Set(args.map((e) => parseInt(e)).sort((a, b) => b - a))];
+  result = finalArray.length > 1 ? finalArray[1] : finalArray[0];
 }
 
-console.log(secondMax(nums));
+console.log(result);
