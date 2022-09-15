@@ -17,5 +17,5 @@ if __name__ == "__main__":
     query = session.query(State).filter(State.name.like('%a%'))
     records = query.all()
 
-    for record in records:
+    for record in Records:
         print("{:d}: {:s}".format(record.id, record.name))
